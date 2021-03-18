@@ -1,0 +1,51 @@
+#!/bin/bash
+
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+echo 提交訊息:
+cat $COMMIT_MSG_FILE
+COMMIT_MSG=`cat $COMMIT_MSG_FILE`
+echo 
+
+
+if [[ "$COMMIT_MSG" =~ ^(fix|feat|perf|doc|style|refactor|chore|test|revert|conflict):[[:space:]]+.*$ ]] || [[ "$COMMIT_MSG" =~ ^Merge[[:space:]]branch[[:space:]] ]] || [[ "$COMMIT_MSG" =~ ^Merge[[:space:]]remote-tracking[[:space:]]branch ]]; then
+    echo "格式正確"
+else
+	cat <<EOF
+錯誤: 格式不正確.
+
+規範格式：
+<type>: <subject>
+<body>
+
+- type (必填) : 修改類型
+1. fix: 修正 bug
+2. feat: 新功能
+3. perf: 性能優化
+4. doc: 文件說明改變
+5. style: 程式碼風格改變
+6. refactor: 已有功能重構
+7. chore: 變更構建流程、其他輔助工具或資源庫
+8. test: 單元測試與其他測試
+9. revert: 還原 Commit
+10. conflict: 合併衝突解決
+
+- subject (必填): 簡要說明
+
+- body (選填): 詳細說明
+
+詳細內容請參閱 Commit Message 規範:
+https://www.notion.so/Git-676b982afcae448e811fdb5b0a24c5a8#5fe7f2d893a24fffa1f43e9bb6620442
+
+EOF
+	exit 1
+fi
+
+
+
+
+
+

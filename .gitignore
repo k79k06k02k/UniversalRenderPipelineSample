@@ -1,0 +1,67 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+Logs/
+ 
+# =============================== #
+# Visual Studio / Rider generated #
+# =============================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+.idea
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+
+# ===== #
+# Other #
+# ===== #
+*.TMP
+*.apk
+*.obb
+*.iap
+*.unity3d
+Builds
+GitLog
+Assembly-CSharp.patch.bytes
+BuildInfo.properties
+Xcode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
